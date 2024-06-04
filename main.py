@@ -19,10 +19,10 @@ while True:
     if identity_check_2 == id_2:
         print("== Identification 2 Complete ==")
         time.sleep(1)
-        print("Welcome back my creator", id_1, "!! This is your Personal Username & Password Manager Project !!")
+        print("Welcome back my creator", id_1)
         break
     else:
-        print("== Identification 2 Failed == please try again")
+        print("== Identification 2 Failed == Please try again")
 
 # Picking which accounts to pull-up
 list_of_accounts = [
@@ -47,23 +47,23 @@ account_details = {
 
 def choose_account():
     while True:
-        print("Creator, which account would you like to bring up?")
+        print("Which account would you like to bring up?")
         account_chosen = input().upper()
         if account_chosen in account_details:
             print(account_details[account_chosen])
             while True:
-                print("Creator, would you like me to bring up a different account? Y/N")
+                print("Would you like me to bring up a different account? Y/N")
                 yes_or_no = input().strip().upper()
                 if yes_or_no in ['Y', 'YES']:
                     break
                 elif yes_or_no in ['N', 'NO']:
-                    print("Good bye Creator... Closing Application")
+                    print("Good bye... Closing Application")
                     time.sleep(3)
                     return
                 else:
                     print("Please type (Y or N) or (Yes or No)")
         else:
-            print("Creator, unfortunately the account you have entered is not in our database")
+            print("Unfortunately the account you have entered is not in our database")
 
 choose_account()
 
